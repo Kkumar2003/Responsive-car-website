@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Selling Website</title>
+    <link rel="icon" href="./images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        nav.show {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            .search-box {
+                display: none;
+            }
+            nav {
+                display: none;
+                flex-direction: column;
+                background-color: #3f3e3e;
+                position: absolute;
+                top: 50px;
+                right: 0;
+                width: 200px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            nav.show {
+                display: flex;
+            }
+
+            nav a {
+                padding: 10px;
+                text-align: center;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .search-box {
+                padding: 10px;
+            }
+        }
+ 
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Car Sales</div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Cars</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+            <a href="../animationPractice/loginpractice/index.html">Login</a>
+            <div class="search-box">
+                <input type="text" placeholder="Search Cars...">
+            </div>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="slider">
+            <div class="slide"></div>
+            <div class="slide"></div>
+            <div class="slide"></div>
+        </div>
+        <div class="hero-content">
+            <h1>Find Your Dream Car</h1>
+            <p>Browse the best deals on top-rated vehicles</p>
+            <ul>
+                <li>Wide range of luxury and budget-friendly cars</li>
+                <li>Guaranteed best prices and discounts</li>
+                <li>Certified pre-owned options available</li>
+                <li>Easy financing and trade-in options</li>
+            </ul>
+        </div>
+    </section>
+    
+    <section class="car-listing">
+        <div class="car-item">
+            <img src="./images/car1.jpg" alt="Car 1">
+            <h3>Luxury Sedan</h3>
+            <p>$35,000</p>
+        </div>
+        <div class="car-item">
+            <img src="./images/car2.jpg" alt="Car 2">
+            <h3>Sporty Coupe</h3>
+            <p>$40,000</p>
+        </div>
+        <div class="car-item">
+            <img src="./images/car3.jpg" alt="Car 3">
+            <h3>SUV Adventure</h3>
+            <p>$50,000</p>
+        </div>
+        <div class="car-item">
+            <img src="./images/car4.jpg" alt="Car 4">
+            <h3>Luxury car</h3>
+            <p>$30,000</p>
+        </div>
+        <div class="car-item">
+            <img src="./images/car6.jpg" alt="Car 5">
+            <h3>Sport y car</h3>
+            <p>$45,000</p>
+        </div>
+        <div class="car-item">
+            <img src="./images/car5.jpg" alt="Car 6">
+            <h3>SUV</h3>
+            <p>$55,000</p>
+        </div>
+        <div class="car-item">
+            <img src="./images/car7.jpg" alt="Car 7">
+            <h3>Racing Car</h3>
+            <p>$40,000</p>
+        </div>   <div class="car-item">
+            <img src="./images/car8.jpg" alt="Car 8">
+            <h3>Luxury RRR</h3>
+            <p>$80,000</p>
+        </div>
+    </section>
+    <section class="partner-logos">
+        <h1>Our Trusted Partners</h1>
+        <div class="logo-container">
+            <img src="./images/acura.svg" alt="acura">
+            <img src="./images/bentley.svg" alt="bentley">
+            <img src="./images/bmw.svg" alt="bmw">
+            <img src="./images/ferrari.svg" alt="ferrari">
+            <img src="./images/lamborghini.svg" alt="lamborghini">
+            <img src="./images/jaguar.svg" alt="jaguar">
+        </div>
+    </section>
+<section class="car-specifications">
+    <h2>Car Specifications</h2>
+    <div class="spec-container">
+        <div class="spec-item">
+            <h3>Engine</h3>
+            <p>Powerful V8 engine with turbocharged options for maximum performance.</p>
+        </div>
+        <div class="spec-item">
+            <h3>Fuel Efficiency</h3>
+            <p>Up to 30 MPG on highways and 25 MPG in city driving conditions.</p>
+        </div>
+        <div class="spec-item">
+            <h3>Safety Features</h3>
+            <p>Equipped with advanced airbags, ABS, lane assist, and collision detection.</p>
+        </div>
+        <div class="spec-item">
+            <h3>Interior</h3>
+            <p>Luxurious leather seats, ambient lighting, and a state-of-the-art infotainment system.</p>
+        </div>
+        <div class="spec-item">
+            <h3>Technology</h3>
+            <p>Integrated GPS, wireless charging, and compatibility with Apple CarPlay and Android Auto.</p>
+        </div>
+        <div class="spec-item">
+            <h3>Warranty</h3>
+            <p>Comprehensive 5-year/60,000-mile warranty with roadside assistance.</p>
+        </div>
+    </div>
+</section>
+
+</section>
+    <section class="reviews">
+        <h2>Customer Reviews</h2>
+        <div class="review-container">
+            <div class="review">
+                <img src="./images/person1.jpg" alt="John D">
+                "Amazing experience! The best car deals in town. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores, ad.
+                "<br> - John D. 
+            </div>
+            <div class="review">
+                <img src="./images/person2.jpg" alt="Sarah W">
+                "Great service and fantastic prices! Highly recommend. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, provident.
+                "<br> - Sarah W.
+            </div>
+            <div class="review">
+                <img src="./images/person3.jpg" alt="Michael B">
+                "Bought my dream car here, and the process was so smooth! Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, deleniti! "<br> - Michael B.
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-container"></div>
+            <div class="footer-section">
+                <h3>ABOUT CAR SALES</h3>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Careers With Us</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Corporate Policies</a></li>
+                    <li><a href="#">Investors</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="footer-section2">
+                <h3>CONNECT WITH US</h3>
+                <ul>
+                    <li><a href="#">Feedback</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Advertise with Us</a></li>
+                    <li><a href="#">Become Partner Dealer</a></li>
+                </ul>
+            </div>
+            <div class="footer-section4">
+                <h3>EXPERIENCE OUR APP</h3>
+                <div class="app-links">
+                    <a href="#"><img src="./images/android.png" alt="App Store"></a>
+                    <a href="#"><img src="./images/google-play.png" alt="Google Play"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Car Sales. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="#"><img src="./images/facebook.svg" alt="Facebook"></a>
+                <a href="#"><img src="./images/x.svg" alt="Twitter"></a>
+                <a href="#"><img src="./images/youtube.svg" alt="YouTube"></a>
+                <a href="#"><img src="./images/instagram.svg" alt="Instagram"></a>
+                <a href="#"><img src="./images/linkedin.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const nav = document.querySelector('nav');
+        const menuToggle = document.querySelector('.menu-toggle');
+
+        menuToggle.addEventListener('mouseover', () => {
+            nav.classList.add('show');
+        });
+
+        nav.addEventListener('mouseleave', () => {
+            nav.classList.remove('show');
+        });
+    </script>
+</body>
+</html>
+
+
